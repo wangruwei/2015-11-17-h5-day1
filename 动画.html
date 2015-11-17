@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画</title>
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	li {
+		width: 200px;
+		height: 200px;
+		background: #0f9;
+		margin: 20px;
+		float: left;
+		transition: 0.3s all ease;
+		-webkit-transition: 1s all ease;
+		-moz-transition: 1s all ease;
+		-ms-transition: 1s all ease;
+		-o-transition: 1s all ease;
+	}
+	.list1:hover {
+		transform: translateY(100px);
+		-webkit-transform: translateY(100px);
+		-moz-transform: translateY(100px);
+		-ms-transform: translateY(100px);
+		-o-transform: translateY(100px);
+	}
+	.list2:hover {
+		transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+	}
+	.list3:hover {
+		transform: scale(1.5);
+		-webkit-transform: scale(1.5);
+		-moz-transform: scale(1.5);
+		-ms-transform: scale(1.5);
+		-o-transform: scale(1.5);
+	}
+	.list4:hover {
+		transform: translateX(200px);
+		-webkit-transform: translateX(200px);
+		-moz-transform: translateX(200px);
+		-ms-transform: translateX(200px);
+		-o-transform: translateX(200px);
+	}
+	</style>
+</head>
+<body>
+	<ul>
+		<li class="list1"></li>
+		<li class="list2"></li>
+		<li class="list3"></li>
+		<li class="list4"></li>
+	</ul>
+</body>
+</html>

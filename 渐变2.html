@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>blur</title>
+	<style>
+	div {
+		width: 200px;
+		height: 200px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -100px;
+		margin-top: -100px;
+		border-radius: 50%;
+		background: linear-gradient(blue 20%,green 20%,green 40%,yellow 40%,yellow 60%,orange 60%,orange 80%,red 80%);
+        background: -webkit-linear-gradient(blue 20%,green 20%,green 40%,yellow 40%,yellow 60%,orange 60%,orange 80%,red 80%);
+		background: -moz-linear-gradient(blue 20%,green 20%,green 40%,yellow 40%,yellow 60%,orange 60%,orange 80%,red 80%);
+		background: -ms-linear-gradient(blue 20%,green 20%,green 40%,yellow 40%,yellow 60%,orange 60%,orange 80%,red 80%);
+		background: -o-linear-gradient(blue 20%,green 20%,green 40%,yellow 40%,yellow 60%,orange 60%,orange 80%,red 80%);
+		transition: 0.2s all ease;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+	}
+	</style>
+	<script>
+	'use strict';
+	document.addEventListener('DOMContentLoaded',function(){
+		var oDiv = document.body.children[0];
+		var i = 0;
+		setInterval(function(){
+			i++;
+			oDiv.style.WebkitTransform = 'rotate('+i+'deg)';
+			oDiv.style.MozTransform = 'rotate('+i+'deg)';
+			oDiv.style.MsTransform = 'rotate('+i+'deg)';
+			oDiv.style.OTransform = 'rotate('+i+'deg)';
+		},10);
+	},false);
+	</script>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

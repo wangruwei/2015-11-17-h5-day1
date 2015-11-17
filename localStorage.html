@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>localStorge</title>
+	<style>
+	textarea {
+		width: 300px;
+		height:200px;
+	}
+	</style>
+	<script>
+	'use strict';
+	window.onload = function(){
+		var oInput = document.body.children[0];
+		oInput.value = localStorage.txt1||'';
+		oInput.oninput = function(){
+			localStorage.txt1 = this.value;
+		};
+	};
+	</script>
+</head>
+<body>
+	<textarea></textarea>
+</body>
+</html>

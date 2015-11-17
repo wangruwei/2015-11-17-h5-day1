@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文字阴影</title>
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	span {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -96px;
+		margin-top: -9px;
+	}
+	#sun {
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background: -webkit-radial-gradient(#F6C348,yellow);
+		box-shadow: 0 0 100px 10px yellow;
+	}
+	</style>
+	<script>
+	'use strict';
+	window.onload = function(){
+		var oS = document.body.children[0];
+		var oSun = document.body.children[1];
+		document.onmousemove = function(ev){
+			var x1 = ev.pageX;
+			var y1 = ev.pageY;
+			var x2 = oS.offsetLeft+oS.offsetWidth/2;
+			var y2 = oS.offsetTop+oS.offsetHeight/2;
+			var disX = (x2-x1)/3;
+			var disY = (y2-y1)/3;
+			var scale = Math.sqrt(disX*disX+disY*disY)/20;
+			oS.style.textShadow = disX+'px '+disY+'px '+scale+'px black';
+			oSun.style.left = x1-oSun.offsetWidth/2+'px';
+			oSun.style.top = y1-oSun.offsetHeight/2+'px';
+		};
+	};
+	</script>
+</head>
+<body>
+	<span>测试文字测试文字测试文字</span>
+	<div id="sun"></div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>localStorge</title>
+	<style>
+	textarea {
+		width: 300px;
+		height:200px;
+	}
+	</style>
+	<script>
+	'use strict';
+	window.onload = function(){
+		var oTxt = document.body.children[0];
+		var oInput = document.body.children[2];
+		oTxt.value = localStorage.txt||'';
+		oTxt.oninput = function(){
+			localStorage.txt = this.value;
+		};
+		oInput.onclick = function(){
+			delete localStorage.txt;
+			alert('删除成功 请刷新页面')
+		};
+	};
+	</script>
+</head>
+<body>
+	<textarea></textarea><br />
+	<input type="button" value="删除localStorage" />
+</body>
+</html>
